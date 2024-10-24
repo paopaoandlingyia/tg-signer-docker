@@ -14,8 +14,10 @@ logger = logging.getLogger(__name__)
 
 class SimpleSigner:
     def __init__(self):
-        self.api_id = int(os.environ["API_ID"])
-        self.api_hash = os.environ["API_HASH"]
+        # 使用固定的 API 凭证
+        self.api_id = 611335
+        self.api_hash = "d524b414d21f4d37f08684c1df41ac9c"
+        # 从环境变量获取聊天ID和签到消息
         self.chat_id = int(os.environ["CHAT_ID"])
         self.sign_message = os.environ.get("SIGN_MESSAGE", "/sign")
         
